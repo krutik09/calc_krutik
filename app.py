@@ -18,9 +18,6 @@ import streamlit as st
 import streamlit.components.v1 as components
 from PIL import Image
 import math
-import win10toast
-from win10toast import ToastNotifier
-notif = ToastNotifier()
 
 
 html_code = """
@@ -49,40 +46,40 @@ if(fun == 'ARITHMETIC'):
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','ADDITION DONE SUCCESSFULLY',duration = 10)
+            
         elif(op == '-'):
             c = a-b
             c = round(c, 3)
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','SUBTRACTION DONE SUCCESSFULLY',duration = 10)
+            
         elif(op == '*'):
             c = a*b
             c = round(c, 3)
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','MULTIPLICATION DONE SUCCESSFULLY',duration = 10)
+            
         elif(op == '/'):
             c = a/b
             c = round(c, 3)
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','DIVISION DONE SUCCESSFULLY',duration = 10)
+            
         elif(op == '%'):
             c = a%b
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','MODULO DONE SUCCESSFULLY',duration = 10)
+            
         elif(op == 'root'):
             c = math.sqrt(a)
             st.write(round(c,3))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','ROOT DONE SUCCESSFULLY',duration = 10)
+            
             
         else:
             st.error("NO SELECTED OPERATION")
@@ -97,17 +94,17 @@ if(fun == 'TRIGNOMETRIC'):
             st.write(round(math.sin(a2),2))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','SIN DONE SUCCESSFULLY',duration = 10)
+            
         elif(op=='cos'):
             st.write(round(math.cos(a2),2))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','COS DONE SUCCESSFULLY',duration = 10)
+            
         elif(op=='tan'):
             st.write(round(math.tan(a2),2))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','TAN DONE SUCCESSFULLY',duration = 10)
+            
         else:
             st.error("NO SELECTED OPERATION")
         
@@ -123,25 +120,25 @@ if(fun == 'RELATIONAL'):
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+                
             elif(op == '<'):
                 c = a<b
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+                
             elif(op == '>='):
                 c = a>=b
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+                
             elif(op == '<='):
                c = a<=b
                st.write(bool(c))
                st.success("EXCELLENT!")
                st.balloons()
-               notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+               
             elif(op == '=='):
                 c = a==b
                 st.write(bool(c))
@@ -152,7 +149,7 @@ if(fun == 'RELATIONAL'):
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+                
             else:
                 st.error("NO SELECTED OPERATION")
 #logical
@@ -167,20 +164,20 @@ if(fun == 'LOGICAL'):
             st.write(int(c))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+            
         elif(op == 'AND'):
             c = a and b
             st.write(int(c))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+            
         elif(op == 'NOT'):
             st.info(" HERE NOT IS CONSIDERED AS UNARY FOR UNARY OPERATIONS SO OPERATION WILL BE PERFORMED AS [NOT {YOUR NUMBER 1}]") 
             c = not a
             st.write(int(c))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','OPERATION SUCCESSFULLY',duration = 10)
+            
         else:
             st.error("NO SELECTED OPERATION")
                          
