@@ -46,40 +46,40 @@ if(fun == 'ARITHMETIC'):
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op == '-'):
             c = a-b
             c = round(c, 3)
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op == '*'):
             c = a*b
             c = round(c, 3)
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op == '/'):
             c = a/b
             c = round(c, 3)
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op == '%'):
             c = a%b
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            
+            notif.show_toast('SUCCESS','MODULO DONE SUCCESSFULLY',duration = 10)
         elif(op == 'root'):
             c = math.sqrt(a)
+            c2= math.sqrt(b)
+            st.info("root of 1 st number you entered")    
             st.write(round(c,3))
+            st.info("root of 2 nd number you entered")       
+            st.write(round(c2,3))
             st.success("EXCELLENT!")
             st.balloons()
-            
+            notif.show_toast('SUCCESS','ROOT DONE SUCCESSFULLY',duration = 10)
             
         else:
             st.error("NO SELECTED OPERATION")
@@ -94,17 +94,14 @@ if(fun == 'TRIGNOMETRIC'):
             st.write(round(math.sin(a2),2))
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op=='cos'):
             st.write(round(math.cos(a2),2))
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op=='tan'):
             st.write(round(math.tan(a2),2))
             st.success("EXCELLENT!")
             st.balloons()
-            
         else:
             st.error("NO SELECTED OPERATION")
         
@@ -120,25 +117,21 @@ if(fun == 'RELATIONAL'):
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                
             elif(op == '<'):
                 c = a<b
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                
             elif(op == '>='):
                 c = a>=b
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                
             elif(op == '<='):
                c = a<=b
                st.write(bool(c))
                st.success("EXCELLENT!")
                st.balloons()
-               
             elif(op == '=='):
                 c = a==b
                 st.write(bool(c))
@@ -149,7 +142,6 @@ if(fun == 'RELATIONAL'):
                 st.write(bool(c))
                 st.success("EXCELLENT!")
                 st.balloons()
-                
             else:
                 st.error("NO SELECTED OPERATION")
 #logical
@@ -164,20 +156,17 @@ if(fun == 'LOGICAL'):
             st.write(int(c))
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op == 'AND'):
             c = a and b
             st.write(int(c))
             st.success("EXCELLENT!")
             st.balloons()
-            
         elif(op == 'NOT'):
             st.info(" HERE NOT IS CONSIDERED AS UNARY FOR UNARY OPERATIONS SO OPERATION WILL BE PERFORMED AS [NOT {YOUR NUMBER 1}]") 
             c = not a
             st.write(int(c))
             st.success("EXCELLENT!")
             st.balloons()
-            
         else:
             st.error("NO SELECTED OPERATION")
                          
