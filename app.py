@@ -31,7 +31,7 @@ fun = st.radio("SELECT FUNCTIONS", ['ARITHMETIC','TRIGNOMETRIC','RELATIONAL','LO
 
 #ARITHMETIC
 if(fun == 'ARITHMETIC'):
-    op = st.selectbox("SELECT OPERATION",['+','-','*','/','%','root'])
+    op = st.selectbox("SELECT OPERATION",['+','-','*','/','%(modulo)','root'])
     a = st.number_input("ENTER NUMBER 1")
     b = st.number_input("ENTER NUMBER 2")
     st.text("CLICK BELOW GIVEN BUTTON TO SUBMIT")
@@ -61,12 +61,11 @@ if(fun == 'ARITHMETIC'):
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-        elif(op == '%'):
+        elif(op == '%(modulo)'):
             c = a%b
             st.write(c)
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','MODULO DONE SUCCESSFULLY',duration = 10)
         elif(op == 'root'):
             c = math.sqrt(a)
             c2= math.sqrt(b)
@@ -76,8 +75,6 @@ if(fun == 'ARITHMETIC'):
             st.write(round(c2,3))
             st.success("EXCELLENT!")
             st.balloons()
-            notif.show_toast('SUCCESS','ROOT DONE SUCCESSFULLY',duration = 10)
-            
         else:
             st.error("NO SELECTED OPERATION")
 #trignometirc 
