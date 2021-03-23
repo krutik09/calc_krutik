@@ -26,9 +26,6 @@ html_code = """
         </div>
         """
 components.html(html_code) 
-#image
-img = Image.open("calc.png")
-st.image(img)
 #SELECT FUNACTION
 fun = st.radio("SELECT FUNCTIONS", ['ARITHMETIC','TRIGNOMETRIC','RELATIONAL','LOGICAL'])
 
